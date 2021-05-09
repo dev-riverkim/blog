@@ -1,9 +1,9 @@
 ---
 title: 잼스택이란?
-date: '2021-05-09'
-tags: [잼스택, jamstack, 용어정리]
-decription: 잼스택이란?.
+description: Health goth raw denim vaporware waistcoat, vegan neutra glossier. Cronut chartreuse tbh meh schlitz. Snackwave lumbersexual pinterest narwhal.
 permalink: posts/{{ title | slug }}/index.html
+date: '2021-05-09'
+tags: [demo-content, code]
 ---
 
 잼스택에 대해서 알아보자
