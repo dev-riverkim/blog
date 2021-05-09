@@ -2,7 +2,7 @@
 title: jamstack
 date: '2021-05-09'
 tags: [demo-content, simple-post]
-description: Meditation gentrify fam, yuccie kickstarter brunch vape. Pitchfork freegan biodiesel bicycle rights. Semiotics flexitarian four loko XOXO raw denim chartreuse.
+description: 잼스택에 대해서 알아봅시다.
 permalink: posts/{{ title | slug }}/index.html
 ---
 
