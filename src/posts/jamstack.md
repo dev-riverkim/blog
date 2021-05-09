@@ -1,7 +1,7 @@
 ---
-title: jamstack
+title: 잼스택(jamstack)이란?
 date: '2021-05-09'
-tags: [demo-content, simple-post]
+tags: [잼스택, jamstack]
 description: 잼스택에 대해서 알아봅시다.
 permalink: posts/{{ title | slug }}/index.html
 ---
