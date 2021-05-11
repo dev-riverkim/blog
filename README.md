@@ -1,5 +1,7 @@
 # Eleventy Duo
 
+블로그
+
 Eleventy Duo is a minimal and beautiful Eleventy theme for personal blogs.
 
 ![demo site screenshot](./screenshot.png)
