@@ -1,6 +1,6 @@
 ---
 title: [javascript] Truthy & Falsy
-description: javascript 응용 - Truthy & Falsy
+description: javascript 응용 Truthy & Falsy
 permalink: posts/{{ title | slug }}/index.html
 date: "2022-02-14"
 tags: [javascript, Truthy & Falsy]
