@@ -2,7 +2,7 @@
 title: Kim Ga Ram
 layout: about.njk
 name: Hello!👋 I'm Garam
-image: "/images/me.jpeg"
+image: "/images/face.png"
 ---
 
 언론사와 웹에이전시에서 신규서비스 제작 및 다양한 프론트 개발 경험이 있습니다.
