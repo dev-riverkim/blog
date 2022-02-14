@@ -1,10 +1,48 @@
 ---
-title: Truthy & Falsy
-description: javascript 응용 Truthy & Falsy
+title: javascript 응용 - Truthy & Falsy
+description: javascript 응용 - Truthy & Falsy
 permalink: posts/{{ title | slug }}/index.html
 date: "2022-02-14"
 tags: [javascript, Truthy & Falsy]
 ---
+
+## Truthy & Falsy
+
+```javascript
+let a = "";
+if (a) {
+  console.log("TRUE");
+} else {
+  console.log("FALSE");
+}
+=> console.log("FALSE");
+
+let a = "string";
+if (a) {
+  console.log("TRUE");
+} else {
+  console.log("FALSE");
+}
+=> console.log("TRUE");
+
+let a = [];
+if (a) {
+  console.log("TRUE");
+} else {
+  console.log("FALSE");
+}
+=> console.log("TRUE");
+
+let a = undefined;
+if (a) {
+  console.log("TRUE");
+} else {
+  console.log("FALSE");
+}
+=> console.log("TRUE");
+
+
+```
 
 Truthy & Falsy?
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
