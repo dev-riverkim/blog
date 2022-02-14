@@ -1,14 +1,12 @@
 ---
-title: About Aidan Charles Powell
+title: Kim Ga Ram
 layout: about.njk
-name: 반갑습니다.
+name: Hello!👋 I'm Garam
 image: "/images/me.jpeg"
 ---
 
-Aidan Charles Powell is a 23-year-old health centre receptionist who enjoys watching television, eating out and social media. He is generous and giving, but can also be very rude and a bit lazy.
+언론사와 웹에이전시에서 신규서비스 제작 및 다양한 프론트 개발 경험이 있습니다.
 
-He is a Jedi who defines himself as straight. He has a degree in medicine. He is a vegetarian. He is obsessed with vintage dresses.
+저는 퍼블리싱에 강점이 있는 프론트엔드 개발자입니다. Javascript, HTML, CSS를 사용해 다수의 서비스를 개발 및 운영했고, 지도데이터 시각화 작업에서 데이터 생성/설계/개발/운영 경험이 있습니다. 최근에는 React 기반의 CMS 기능 개발 및 SEO 최적화를 진행하고 있습니다.
 
-He grew up in a middle class neighbourhood. After his mother died when he was young, he was raised by his father
-
-He is currently married to Maureen Erika Quinn. Maureen is 13 years older than him and works as a sales assistant.
+새로운 서비스, 프레임워크, 디자인 시스템, 데이터 시각화에 관심이 많아, 강의를 듣거나 사이드 프로젝트를 하며 실무에 적용하려 노력하고 새로 알게 된 지식을 팀원들과 공유하는 것을 좋아합니다.
