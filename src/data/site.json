@@ -32,17 +32,17 @@
       "external": true
     },
     {
-      "text": "Twitter",
-      "url": "https://twitter.com/",
+      "text": "Resume",
+      "url": "https://programmers.co.kr/pr/wavy",
       "external": true
     }
   ],
   "footerLinks": [
-    {
-      "text": "RSS",
-      "url": "/feed.xml",
-      "external": true
-    }
+    // {
+    //   "text": "RSS",
+    //   "url": "/feed.xml",
+    //   "external": true
+    // }
   ],
-  "showFooterAttribution": false
+  "showFooterAttribution": true
 }
