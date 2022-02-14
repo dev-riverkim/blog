@@ -1,12 +1,12 @@
 ---
 layout: home
-title: "home"
+title: "Eleventy Duo"
 ---
 
-# Profile
+# Hello World
 
-안녕하세요👋
+안녕하세요
 
 프론트엔드 개발자 김가람입니다.
 
-언론사 및 웹에이전시에서 신규서비스 제작 및 프론트 개발에 다양한 경험이 있습니다.
+Eleventy Duo is a minimal and beautiful Eleventy theme for personal blogs. Checkout the [project's github repo](https://github.com/yinkakun/eleventy-duo) for more info.
