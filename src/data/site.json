@@ -1,10 +1,10 @@
 {
   "name": "Kimgaram",
-  "description": "Eleventy Duo is a minimal and beautiful Eleventy theme for personal blogs.",
-  "url": "https://eleventyduo.netlify.app",
+  "description": "Kimgaram personal blogs.",
+  "url": "https://riverkim.netlify.app",
   "author": {
-    "name": "Author Name",
-    "email": "author@site.com",
+    "name": "Kim Ga Ram",
+    "email": "wavy@kakao.com",
     "twitterHandle": "author_handle"
   },
   "defaultSocialImage": "/images/default-social-image.png",

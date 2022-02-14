@@ -1,5 +1,5 @@
 ---
-title: Kim Ga Ram
+title: About
 layout: about.njk
 name: Hello!👋 I'm Garam
 image: "/images/face.png"
