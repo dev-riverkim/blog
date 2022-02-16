@@ -11,7 +11,6 @@ tags: [javascript, Truthy & Falsy]
 참 같은 값, 거짓 같은 값
 
 ```javascript
-
 let a = "string";
 
 if (a) {
@@ -19,70 +18,88 @@ if (a) {
 } else {
   console.log("FALSE");
 }
-=> console.log("TRUE");
+```
 
+결과: console.log("TRUE");
+
+```javascript
 let a = [];
 if (a) {
   console.log("TRUE");
 } else {
   console.log("FALSE");
 }
-=> console.log("TRUE");
+```
 
+결과: console.log("TRUE");
 
+```javascript
 let a = {};
 if (a) {
   console.log("TRUE");
 } else {
   console.log("FALSE");
 }
-=> console.log("TRUE");
+```
 
+결과: console.log("TRUE");
+
+```javascript
 let a = "";
 if (a) {
   console.log("TRUE");
 } else {
   console.log("FALSE");
 }
-=> console.log("FALSE");
+```
 
+결과: console.log("FALSE");
+
+```javascript
 let a = undefined;
 if (a) {
   console.log("TRUE");
 } else {
   console.log("FALSE");
 }
-=> console.log("FALSE");
+```
 
+결과: console.log("FALSE");
 
+```javascript
 let a = null;
 if (a) {
   console.log("TRUE");
 } else {
   console.log("FALSE");
 }
-=> console.log("FALSE");
+```
 
+결과: console.log("FALSE");
+
+```javascript
 let a = 0;
 if (a) {
   console.log("TRUE");
 } else {
   console.log("FALSE");
 }
-=> console.log("FALSE");
+```
 
+결과: console.log("FALSE");
+
+```javascript
 let a = NaN;
 if (a) {
   console.log("TRUE");
 } else {
   console.log("FALSE");
 }
-=> console.log("FALSE");
-
 ```
 
-```javascript
+결과: console.log("FALSE");
 
+```javascript
 const getName = (person) => {
   return person.name;
 };
@@ -92,10 +109,12 @@ const name = getName(person);
 
 console.log(name); => "riverkim"
 
+```
 
+```javascript
 const getName = (person) => {
-  if(person === undefined){
-    return "객체가 아닙니다."
+  if (person === undefined) {
+    return "객체가 아닙니다.";
   }
   return person.name;
 };
@@ -103,13 +122,14 @@ const getName = (person) => {
 let person;
 
 const name = getName(person);
+```
 
-console.log(name); => "객체가 아닙니다."
+결과: console.log(name); => "객체가 아닙니다."
 
-
+```javascript
 const getName = (person) => {
-  if(person === undefined || person === null) {
-    return "객체가 아닙니다."
+  if (person === undefined || person === null) {
+    return "객체가 아닙니다.";
   }
   return person.name;
 };
@@ -117,13 +137,15 @@ const getName = (person) => {
 let person;
 
 const name = getName(person);
+```
 
-console.log(name); => "객체가 아닙니다."
+결과: console.log(name); => "객체가 아닙니다."
 
+```javascript
 // 예외처리
 const getName = (person) => {
-  if(!person) {
-    return "객체가 아닙니다."
+  if (!person) {
+    return "객체가 아닙니다.";
   }
   return person.name;
 };
@@ -131,9 +153,6 @@ const getName = (person) => {
 let person = null;
 
 const name = getName(person);
-
-console.log(name); => "객체가 아닙니다."
-
-
-
 ```
+
+결과: console.log(name); => "객체가 아닙니다."
