@@ -103,13 +103,11 @@ if (a) {
 const getName = (person) => {
   return person.name;
 };
-let person = { name: 'riverkim' };
+let person = { name: "riverkim" };
 const name = getName(person);
-
-
-console.log(name); => "riverkim"
-
 ```
+
+결과: console.log("riverkim");
 
 ```javascript
 const getName = (person) => {
@@ -124,7 +122,7 @@ let person;
 const name = getName(person);
 ```
 
-결과: console.log(name); => "객체가 아닙니다."
+결과: console.log("객체가 아닙니다.");
 
 ```javascript
 const getName = (person) => {
@@ -139,7 +137,7 @@ let person;
 const name = getName(person);
 ```
 
-결과: console.log(name); => "객체가 아닙니다."
+결과: console.log(객체가 아닙니다);
 
 ```javascript
 // 예외처리
@@ -155,4 +153,4 @@ let person = null;
 const name = getName(person);
 ```
 
-결과: console.log(name); => "객체가 아닙니다."
+결과: console.log("객체가 아닙니다.");
