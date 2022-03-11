@@ -126,3 +126,71 @@ const car = {};
 ```
 
 두 번째 방법이 더 일반적으로 사용되는데, 이를 '객체 리터럴' 이라고도 부른다.
+
+```javascript
+const car = {};
+car.color = "red";
+// {color:'red'}
+```
+
+점 표기법을 사용해 car 객체에 새 속성을 추가
+
+객체의 속성에 접근할 때는 점 표기법과 대괄호 표기법 두 가지 방법이 있다.
+
+```javascript
+const car = {
+  wheels: 4,
+  color: "red",
+};
+
+console.log(car.wheels); // 4
+console.log(car["color"]); // red
+```
+
+두 방법이 완전히 동일하지는 않음
+여러 단어로 이뤄진 속성의 경우 점 표기법 사용 불가능
+
+```javascript
+const car = {
+  wheels: 4,
+  color: "red",
+  "goes fast": true,
+};
+
+
+console.log(car.goes fast); // error
+console.log(car["goes fast"]) // true
+```
+
+대괄호 표기법을 사용하는 또 다른 경우는 키를 사용해서 객체의 속성에 접근할 때
+
+```javascript
+const cars = {
+  ferrari: "california",
+  porsche: "911",
+  bugatti: "veyron",
+};
+
+// 사용자 입력
+const key = "ferrari";
+
+console.log(cars.key); // undefined
+console.log(cars["key"]); // undefined
+console.log(cars[key]); // california
+```
+
+변수에 저장된 키를 통해 객체의 속성에 접근하려면 대괄호 표기법을 사용해야 한다.
+
+## 객체의 복사
+
+원시 자료형과는 달리 객체를 복사할 때는 참조방식이 쓰인다.
+
+```javascript
+let car = {
+  color: "red",
+};
+
+let secondCar = car;
+```
+
+여기서 secondCar는 그 자체로 객체가 아니라 car에 대한 참조, 즉 주소를 저장한다.
