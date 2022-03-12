@@ -2,7 +2,7 @@
 title: chapter0 - 자바스크립트기초
 description: 모던자바스크립트 핵심가이드 정리
 permalink: posts/{{ title | slug }}/index.html
-date: "2022-02-16"
+date: "2022-03-11"
 tags: [javascript]
 ---
 
