@@ -1,5 +1,5 @@
 ---
-title: chapter0 - 자바스크립트기초
+title: chapter1 - var,let,const
 description: 모던자바스크립트 핵심가이드 정리
 permalink: posts/{{ title | slug }}/index.html
 date: "2022-03-12"
