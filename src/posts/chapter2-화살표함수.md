@@ -69,4 +69,41 @@ const arrowFunction = (name) => {
 ```javascript
 const race = "100m dash";
 const runners = ["Usain Bolt", "Justin Gatlin", "Asafa Powell"];
+
+const results = runners.map((runner, i) => ({
+  name: runner,
+  race,
+  place: i + 1,
+}));
+
+console.log(results);
+// [
+//   { name: "Usain Bolt", race: "100m dash", place: 1 },
+//   { name: "Justin Gatlin", race: "100m dash", place: 2 },
+//   { name: "Asafa Powell", race: "100m dash", place: 3 },
+// ];
 ```
+
+이 예에서는 map함수를 사용하여 runners 배열에 대한 반복을 구현한다.
+첫 번째 인수 runner는 배열의 현재 원소고, i는 배열의 인덱스이다.
+배열의 각 원소에 대해 name,race,place속성을 포함하는 객체를 results에 추가한다.
+
+중괄호 안에 있는 것이 암시적으로 반환하려는 객체 리터럴임을 자바스크립트에 알리려면, 전체 괄호 안에 감싸야 한다.
+
+여기서 race를 쓰나 race:race를 쓰나 모두 결과는 동일하다.
+
+# 2.3 화살표 함수는 익명함수
+
+이전 예제에서 볼 수 있듯이 화살표 함수는 익명 함수이다.
+참조할 이름이 필요하다면 함수를 변수에 할당하면 된다.
+
+```javascript
+const greeting = (name) => `hello ${name}`;
+greeting("Tom");
+```
+
+# 2.4 화살표 함수와 this 키워드
+
+화살표 함수 내부에서 this 키워드를 사용할 때는 일반 함수와 다르게 동작하므로 주의해야 한다.
+
+화살표 함수를 사용할 때 this 키워드는 상위 스코프에 상속된다.
