@@ -107,3 +107,149 @@ greeting("Tom");
 화살표 함수 내부에서 this 키워드를 사용할 때는 일반 함수와 다르게 동작하므로 주의해야 한다.
 
 화살표 함수를 사용할 때 this 키워드는 상위 스코프에 상속된다.
+
+```html
+<div class="box open"> This is a box </div>
+```
+
+```css
+.opening {
+  background-color: red;
+}
+```
+
+```javascript
+// box 클래스를 가진 div를 가져온다
+const box = document.querySelector(".box");
+
+// 클릭 이벤트 핸들러를 등록
+box.addEventListener("click", function () {
+  console.log("클릭됨");
+  this.classList.toggle("opening");
+  console.log(this); // box 엘리먼트
+  setTimeout(function () {
+    // 클래스를 다시 토글
+    console.log(this); // window
+    this.classList.toggle("opening");
+  }, 500);
+});
+
+// Uncaught TypeError: Cannot read properties of undefined (reading 'toggle')
+```
+
+이 코드의 문제는, 첫 번째 this 가 const box에 할당되었지만 setTimeout내부의 두 번째 this는 Window객체로 설정되어 다음과 같은 오류가 발생한다는 점
+
+화살표 함수가 부모 스코프에서 this의 값을 상속한다는 것을 인지하면, 다음과 같이 함수를 다시 작성 할 수 있다.
+
+```javascript
+// box 클래스를 가진 div를 가져온다
+const box = document.querySelector(".box");
+
+// 클릭 이벤트 핸들러를 등록
+box.addEventListener("click", function () {
+  console.log("클릭됨");
+  this.classList.toggle("opening");
+  console.log(this); // box 엘리먼트
+  setTimeout(() => {
+    // 클래스를 다시 토글
+    console.log(this); // box 엘리먼트
+    this.classList.toggle("opening");
+  }, 500);
+});
+```
+
+여기서 두 번째 this는 부모로부터 상속되며 const box로 설정된다.
+
+# 2.5 화살표 함수를 피해야 하는 경우
+
+this 키워드의 상속에 대해 알았으니, 화살표 함수를 사용하면 문제가 될 수 있는 상황을 정리해보자.
+
+다음 예는 화살표 함수에서 this를 주의해서 사용해야 하는 경우이다.
+
+```javascript
+const button = document.querySelector("btn");
+
+button.addEventListener("click", () => {
+  // 오류: 여기서 this는 Window 객체를 가리킴
+  this.classList.toggle("on");
+});
+```
+
+다음과 같은 예도 마찬가지다.
+
+```javascript
+const person1 = {
+  age: 10,
+  grow: function () {
+    this.age++;
+    console.log(this.age);
+  },
+};
+person1.grow(); // 11
+
+const person2 = {
+  age: 10,
+  grow: () => {
+    this.age++; // 오류 여기서 this는 Window 객체를 가리킴
+    console.log(this.age);
+  },
+};
+
+person2.grow();
+```
+
+화살표 함수와 일반 함수의 또 다른 차이점은 arguments 객체에 대한 접근 방식이다.
+
+arguments객체는 내부 함수에서 접근할 수 있는 배열 객체이며, 해당 함수에 전달된 인수의 값을 담고 있다.
+
+간단한 예를 살펴보자
+
+```javascript
+function example() {
+  console.log(arguments[0]);
+}
+
+example(1, 2, 3); // 1
+```
+
+이와 같이 배열 표기법 arguments[0]을 사용하면 첫 번째 인수에 접근할 수 있다.
+this 키워드와 비슷하게, 화살표 함수에서 arguments 객체는 부모 스코프의 값을 상속한다.
+
+앞에서 본 예제의 runners 배열을 응용한 다음 예를 살펴보자
+
+```javascript
+const showWinner = () => {
+  const winner = arguments[0];
+  console.log(`${winner} was the winner`);
+};
+
+showWinner("Usain Bolt", "Justin Gatlin", "Asafa Powell");
+//arguments is not defined
+```
+
+함수에 전달된 모든 인수에 접근하려면, 기존 함수표기법이나 스프레드문법을 사용하면 된다.
+
+여기서 arguments는 변수 이름이 아니라 키워드라는 점에 유의하자..
+
+화살표 함수로 arguments에 접근하는 예는 다음과 같다.
+
+```javascript
+const showWinner = (...args) => {
+  const winner = args[0];
+  console.log(`${winner} was the winner`);
+};
+
+showWinner("Usain Bolt", "Justin Gatlin", "Asafa Powell");
+// Usain Bolt was the winner
+```
+
+위 코드를 일반함수로 구현하면 다음과 같다.
+
+```javascript
+const showWinner = function () {
+  const winner = arguments[0];
+  console.log(`${winner} was the winner`);
+};
+
+showWinner("Usain Bolt", "Justin Gatlin", "Asafa Powell");
+```
