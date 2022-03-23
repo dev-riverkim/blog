@@ -2,7 +2,7 @@
 title: chapter3 - 함수 기본값 인수
 description: 모던자바스크립트 핵심가이드 정리
 permalink: posts/{{ title | slug }}/index.html
-date: "2022-03-15"
+date: "2022-03-22"
 tags: [javascript, 인수]
 ---
 
